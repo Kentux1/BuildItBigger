@@ -13,7 +13,7 @@ import com.udacity.gradle.builditbigger.backend.jokeApi.JokeApi;
 
 import java.io.IOException;
 
-class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
+public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
     private static JokeApi myApiService = null;
     private OnTaskCompleted mOnTaskCompleted;
 
