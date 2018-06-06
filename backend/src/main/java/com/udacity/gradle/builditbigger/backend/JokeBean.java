@@ -5,7 +5,7 @@ public class JokeBean {
 
     private String myData;
 
-    public String getRandomJoke() {
+    public String getData() {
         return myData;
     }
 
