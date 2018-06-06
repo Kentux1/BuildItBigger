@@ -1,6 +1,7 @@
 package com.udacity.gradle.builditbigger;
 
 import android.support.test.runner.AndroidJUnit4;
+import android.text.TextUtils;
 import android.util.Log;
 
 import org.junit.Test;
@@ -8,6 +9,7 @@ import org.junit.runner.RunWith;
 
 import java.util.concurrent.TimeUnit;
 
+import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertTrue;
 
@@ -25,7 +27,7 @@ public class AsyncTaskTest {
 
             String result = endpointsAsyncTask.get(30, TimeUnit.SECONDS);
 
-            assertNotNull(result);
+            assertFalse(TextUtils.isEmpty(result));
             assertTrue(result.length() > 0);
         } catch (Exception e) {
             Log.e("AsyncTaskText", "Connection timed out.");

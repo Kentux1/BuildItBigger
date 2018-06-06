@@ -17,7 +17,7 @@ import com.google.api.server.spi.config.ApiNamespace;
 )
 public class JokeEndpoint {
 
-    /** A simple endpoint method that takes a name and says Hi back */
+    /** A simple endpoint method that gets a random joke from the java library */
     @ApiMethod(name = "tellRandomJoke")
     public JokeBean tellRandomJoke() {
         JokeBean response = new JokeBean();

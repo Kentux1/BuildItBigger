@@ -13,7 +13,9 @@ public class DisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display);
         TextView randomJokeTextView = findViewById(R.id.display_text_view);
         Intent intent = getIntent();
-        String randomJoke = intent.getStringExtra("randomJoke");
-        randomJokeTextView.setText(randomJoke);
+        if (intent.hasExtra("randomJoke")) {
+            String randomJoke = intent.getStringExtra("randomJoke");
+            randomJokeTextView.setText(randomJoke);
+        }
     }
 }
